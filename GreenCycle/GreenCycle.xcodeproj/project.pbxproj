@@ -10,6 +10,8 @@
 		4814314F2B1B17270018EF44 /* MapCont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4814314E2B1B17270018EF44 /* MapCont.swift */; };
 		481431522B1B18F90018EF44 /* NMapsMap in Frameworks */ = {isa = PBXBuildFile; productRef = 481431512B1B18F90018EF44 /* NMapsMap */; };
 		481431542B1B20230018EF44 /* MapContDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481431532B1B20230018EF44 /* MapContDetail.swift */; };
+		4861A5012B1B44FA00BE3B94 /* ReviewCont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4861A5002B1B44FA00BE3B94 /* ReviewCont.swift */; };
+		4861A5032B1B45EE00BE3B94 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4861A5022B1B45EE00BE3B94 /* TableViewCell.swift */; };
 		48BC91CB2B16CE09008D10C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BC91CA2B16CE09008D10C6 /* AppDelegate.swift */; };
 		48BC91CD2B16CE09008D10C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BC91CC2B16CE09008D10C6 /* SceneDelegate.swift */; };
 		48BC91CF2B16CE09008D10C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BC91CE2B16CE09008D10C6 /* ViewController.swift */; };
@@ -57,6 +59,8 @@
 /* Begin PBXFileReference section */
 		4814314E2B1B17270018EF44 /* MapCont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCont.swift; sourceTree = "<group>"; };
 		481431532B1B20230018EF44 /* MapContDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapContDetail.swift; sourceTree = "<group>"; };
+		4861A5002B1B44FA00BE3B94 /* ReviewCont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCont.swift; sourceTree = "<group>"; };
+		4861A5022B1B45EE00BE3B94 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		48BC91C72B16CE09008D10C6 /* GreenCycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenCycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48BC91CA2B16CE09008D10C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48BC91CC2B16CE09008D10C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +146,8 @@
 				48BC91CC2B16CE09008D10C6 /* SceneDelegate.swift */,
 				48BC91CE2B16CE09008D10C6 /* ViewController.swift */,
 				48BC91D02B16CE09008D10C6 /* Main.storyboard */,
+				4861A5002B1B44FA00BE3B94 /* ReviewCont.swift */,
+				4861A5022B1B45EE00BE3B94 /* TableViewCell.swift */,
 				481431532B1B20230018EF44 /* MapContDetail.swift */,
 				4814314E2B1B17270018EF44 /* MapCont.swift */,
 				48BC91D32B16CE0A008D10C6 /* Assets.xcassets */,
@@ -349,6 +355,8 @@
 				4814314F2B1B17270018EF44 /* MapCont.swift in Sources */,
 				48BC91CD2B16CE09008D10C6 /* SceneDelegate.swift in Sources */,
 				481431542B1B20230018EF44 /* MapContDetail.swift in Sources */,
+				4861A5032B1B45EE00BE3B94 /* TableViewCell.swift in Sources */,
+				4861A5012B1B44FA00BE3B94 /* ReviewCont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

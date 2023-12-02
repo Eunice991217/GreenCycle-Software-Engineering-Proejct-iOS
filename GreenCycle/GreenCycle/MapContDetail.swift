@@ -11,14 +11,31 @@ class MapContDetail: UIViewController {
     
     
     @IBOutlet weak var reviewTextField: UIView!
-    
     @IBOutlet weak var textField: UITextView!
+    
+    
+    @IBOutlet weak var createBtn: UIView!
+    @IBOutlet weak var readBtn: UIView!
+    
+    
+    @IBAction func readBtnDidTap(_ sender: Any) {
+        guard let ReviewCont = self.storyboard?.instantiateViewController(withIdentifier: "ReviewCont") as? ReviewCont else{return}
+        present(ReviewCont, animated: true, completion: nil)
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         reviewTextField.layer.cornerRadius = 20
         reviewTextField.layer.maskedCorners = CACornerMask(arrayLiteral: .layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner)
+        
+        createBtn.layer.cornerRadius = 20
+        createBtn.layer.maskedCorners = CACornerMask(arrayLiteral: .layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner)
+        
+        readBtn.layer.cornerRadius = 20
+        readBtn.layer.maskedCorners = CACornerMask(arrayLiteral: .layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner)
         
         textField.delegate = self
                 
