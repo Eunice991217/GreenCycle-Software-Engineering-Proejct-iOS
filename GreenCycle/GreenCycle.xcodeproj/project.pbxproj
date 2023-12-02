@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4814314F2B1B17270018EF44 /* MapCont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4814314E2B1B17270018EF44 /* MapCont.swift */; };
+		481431522B1B18F90018EF44 /* NMapsMap in Frameworks */ = {isa = PBXBuildFile; productRef = 481431512B1B18F90018EF44 /* NMapsMap */; };
+		481431542B1B20230018EF44 /* MapContDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481431532B1B20230018EF44 /* MapContDetail.swift */; };
 		48BC91CB2B16CE09008D10C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BC91CA2B16CE09008D10C6 /* AppDelegate.swift */; };
 		48BC91CD2B16CE09008D10C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BC91CC2B16CE09008D10C6 /* SceneDelegate.swift */; };
 		48BC91CF2B16CE09008D10C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BC91CE2B16CE09008D10C6 /* ViewController.swift */; };
@@ -52,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4814314E2B1B17270018EF44 /* MapCont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCont.swift; sourceTree = "<group>"; };
+		481431532B1B20230018EF44 /* MapContDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapContDetail.swift; sourceTree = "<group>"; };
 		48BC91C72B16CE09008D10C6 /* GreenCycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenCycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48BC91CA2B16CE09008D10C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48BC91CC2B16CE09008D10C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				481431522B1B18F90018EF44 /* NMapsMap in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +142,8 @@
 				48BC91CC2B16CE09008D10C6 /* SceneDelegate.swift */,
 				48BC91CE2B16CE09008D10C6 /* ViewController.swift */,
 				48BC91D02B16CE09008D10C6 /* Main.storyboard */,
+				481431532B1B20230018EF44 /* MapContDetail.swift */,
+				4814314E2B1B17270018EF44 /* MapCont.swift */,
 				48BC91D32B16CE0A008D10C6 /* Assets.xcassets */,
 				48BC91D52B16CE0A008D10C6 /* LaunchScreen.storyboard */,
 				48BC91D82B16CE0A008D10C6 /* Info.plist */,
@@ -199,6 +207,9 @@
 			dependencies = (
 			);
 			name = GreenCycle;
+			packageProductDependencies = (
+				481431512B1B18F90018EF44 /* NMapsMap */,
+			);
 			productName = GreenCycle;
 			productReference = 48BC91C72B16CE09008D10C6 /* GreenCycle.app */;
 			productType = "com.apple.product-type.application";
@@ -271,6 +282,9 @@
 				Base,
 			);
 			mainGroup = 48BC91BE2B16CE09008D10C6;
+			packageReferences = (
+				481431502B1B18F90018EF44 /* XCRemoteSwiftPackageReference "NMapsMap" */,
+			);
 			productRefGroup = 48BC91C82B16CE09008D10C6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -332,7 +346,9 @@
 			files = (
 				48BC91CF2B16CE09008D10C6 /* ViewController.swift in Sources */,
 				48BC91CB2B16CE09008D10C6 /* AppDelegate.swift in Sources */,
+				4814314F2B1B17270018EF44 /* MapCont.swift in Sources */,
 				48BC91CD2B16CE09008D10C6 /* SceneDelegate.swift in Sources */,
+				481431542B1B20230018EF44 /* MapContDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -673,6 +689,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		481431502B1B18F90018EF44 /* XCRemoteSwiftPackageReference "NMapsMap" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jaemyeong/NMapsMap";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.17.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		481431512B1B18F90018EF44 /* NMapsMap */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 481431502B1B18F90018EF44 /* XCRemoteSwiftPackageReference "NMapsMap" */;
+			productName = NMapsMap;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 48BC91BF2B16CE09008D10C6 /* Project object */;
 }
