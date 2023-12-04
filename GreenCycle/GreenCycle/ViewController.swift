@@ -16,9 +16,35 @@ class ViewController: UIViewController {
     
     @IBAction func enterDidTap(_ sender: Any) {
         
-        guard let MapCont = self.storyboard?.instantiateViewController(withIdentifier: "MapCont") as? MapCont else{return}
-        MapCont.modalPresentationStyle = .fullScreen
-        present(MapCont, animated: true, completion: nil)
+        guard let text = TextView.text, !text.isEmpty else {
+            // Handle the case where TextView.text is empty
+            return
+        }
+        
+        guard let url = URL(string: "http://localhost:8080/api/createUser/\(text)") else {
+            // Handle the case where the URL is invalid
+            return
+        }
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST" // You can change this depending on your API requirements
+
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            // Handle the response from the server
+            if let error = error {
+                print("Error: \(error)")
+            } else if let data = data {
+                // Process the data received from the server (if needed)
+                print("Response: \(String(data: data, encoding: .utf8) ?? "")")
+            }
+        }.resume()
+        
+        // Present the MapCont view controller
+        guard let mapCont = self.storyboard?.instantiateViewController(withIdentifier: "MapCont") as? MapCont else {
+            return
+        }
+        mapCont.modalPresentationStyle = .fullScreen
+        present(mapCont, animated: true, completion: nil)
         
     }
     
