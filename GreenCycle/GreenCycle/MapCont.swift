@@ -8,6 +8,7 @@
 import UIKit
 import NMapsMap
 import CoreLocation
+import Alamofire
 
 class MapCont: UIViewController, CLLocationManagerDelegate {
     
@@ -45,38 +46,60 @@ class MapCont: UIViewController, CLLocationManagerDelegate {
         let latitude = locationManager.location?.coordinate.latitude ?? 0
         let longitude = locationManager.location?.coordinate.longitude ?? 0
 
-        let cameraUpdate = NMFCameraUpdate(scrollTo: NMGLatLng(lat: latitude, lng: longitude), zoomTo: 15.0)
+        let cameraUpdate = NMFCameraUpdate(scrollTo: NMGLatLng(lat: latitude, lng: longitude), zoomTo: 10.0)
         mapView.moveCamera(cameraUpdate)
         cameraUpdate.animation = .easeIn
-
-        // 마커
-        let new_marker = NMFMarker()
         
-        new_marker.position = NMGLatLng(lat:latitude,lng: longitude)
+        fetchDataFromAPI()
+
+        // Do any additional setup after loading the view.
+    }
+    
+    func fetchDataFromAPI() {
+        let apiUrl = "http://localhost:8080/api/map"
+
+        AF.request(apiUrl, method: .get).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                if let jsonArray = value as? [[String: Any]] {
+                    for json in jsonArray {
+                        if let latitude = json["latitude"] as? Double,
+                           let longitude = json["longitude"] as? Double {
+                            // Now you can use latitude and longitude to create markers
+                            self.createMarker(latitude: latitude, longitude: longitude)
+                        }
+                    }
+                }
+            case .failure(let error):
+                print("Error: \(error)")
+            }
+        }
+    }
+
+    // Function to create a marker
+    func createMarker(latitude: Double, longitude: Double) {
+        let new_marker = NMFMarker()
+
+        new_marker.position = NMGLatLng(lat: latitude, lng: longitude)
         new_marker.iconImage = NMFOverlayImage(name: "MarkerImage")
 
         new_marker.width = 50
         new_marker.height = 50
-        
+
         new_marker.mapView = mapView
-        
+
         new_marker.touchHandler = { (overlay: NMFOverlay) -> Bool in
             print("마커 클릭")
-            
+
             // MapDetailController로 화면 전환
             if let mapDetailController = self.storyboard?.instantiateViewController(withIdentifier: "MapDetailController") as? MapContDetail {
                 // 필요한 경우 데이터를 전달하려면 여기에서 설정
                 mapDetailController.modalPresentationStyle = .fullScreen
                 self.present(mapDetailController, animated: true, completion: nil)
             }
-            
+
             return true
         }
-        
-        print(latitude)
-        print(longitude)
-
-        // Do any additional setup after loading the view.
     }
     
     

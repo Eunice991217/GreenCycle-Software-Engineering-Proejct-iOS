@@ -37,6 +37,8 @@
 		48BC92182B16D181008D10C6 /* JetBrainsMono-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48BC92082B16D181008D10C6 /* JetBrainsMono-ExtraLight.ttf */; };
 		48BC92192B16D181008D10C6 /* JetBrainsMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48BC92092B16D181008D10C6 /* JetBrainsMono-Bold.ttf */; };
 		48BC921A2B16D181008D10C6 /* JetBrainsMono-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48BC920A2B16D181008D10C6 /* JetBrainsMono-LightItalic.ttf */; };
+		48F516392B1E12B4002AD505 /* ServerDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F516382B1E12B4002AD505 /* ServerDataModel.swift */; };
+		48F5163C2B1E19D4002AD505 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 48F5163B2B1E19D4002AD505 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,7 @@
 		48BC92082B16D181008D10C6 /* JetBrainsMono-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JetBrainsMono-ExtraLight.ttf"; sourceTree = "<group>"; };
 		48BC92092B16D181008D10C6 /* JetBrainsMono-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JetBrainsMono-Bold.ttf"; sourceTree = "<group>"; };
 		48BC920A2B16D181008D10C6 /* JetBrainsMono-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JetBrainsMono-LightItalic.ttf"; sourceTree = "<group>"; };
+		48F516382B1E12B4002AD505 /* ServerDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +101,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				481431522B1B18F90018EF44 /* NMapsMap in Frameworks */,
+				48F5163C2B1E19D4002AD505 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +157,7 @@
 				48BC91D32B16CE0A008D10C6 /* Assets.xcassets */,
 				48BC91D52B16CE0A008D10C6 /* LaunchScreen.storyboard */,
 				48BC91D82B16CE0A008D10C6 /* Info.plist */,
+				48F516382B1E12B4002AD505 /* ServerDataModel.swift */,
 			);
 			path = GreenCycle;
 			sourceTree = "<group>";
@@ -215,6 +220,7 @@
 			name = GreenCycle;
 			packageProductDependencies = (
 				481431512B1B18F90018EF44 /* NMapsMap */,
+				48F5163B2B1E19D4002AD505 /* Alamofire */,
 			);
 			productName = GreenCycle;
 			productReference = 48BC91C72B16CE09008D10C6 /* GreenCycle.app */;
@@ -290,6 +296,7 @@
 			mainGroup = 48BC91BE2B16CE09008D10C6;
 			packageReferences = (
 				481431502B1B18F90018EF44 /* XCRemoteSwiftPackageReference "NMapsMap" */,
+				48F5163A2B1E19D4002AD505 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 48BC91C82B16CE09008D10C6 /* Products */;
 			projectDirPath = "";
@@ -352,6 +359,7 @@
 			files = (
 				48BC91CF2B16CE09008D10C6 /* ViewController.swift in Sources */,
 				48BC91CB2B16CE09008D10C6 /* AppDelegate.swift in Sources */,
+				48F516392B1E12B4002AD505 /* ServerDataModel.swift in Sources */,
 				4814314F2B1B17270018EF44 /* MapCont.swift in Sources */,
 				48BC91CD2B16CE09008D10C6 /* SceneDelegate.swift in Sources */,
 				481431542B1B20230018EF44 /* MapContDetail.swift in Sources */,
@@ -707,6 +715,14 @@
 				minimumVersion = 3.17.0;
 			};
 		};
+		48F5163A2B1E19D4002AD505 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -714,6 +730,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 481431502B1B18F90018EF44 /* XCRemoteSwiftPackageReference "NMapsMap" */;
 			productName = NMapsMap;
+		};
+		48F5163B2B1E19D4002AD505 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48F5163A2B1E19D4002AD505 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
