@@ -143,13 +143,25 @@
                                             <constraint firstAttribute="width" constant="20" id="teM-yf-8Na"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZD-xo-jzu">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="40"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <action selector="backDidTap:" destination="rs0-3D-iVh" eventType="touchUpInside" id="Bfs-fm-O6z"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="6xp-yf-Fqv"/>
                                     <constraint firstAttribute="bottom" secondItem="Goh-FN-PgX" secondAttribute="bottom" constant="10" id="Bop-Bs-jZQ"/>
+                                    <constraint firstItem="ZZD-xo-jzu" firstAttribute="top" secondItem="inS-u7-bkn" secondAttribute="top" id="HYY-Yv-lFA"/>
                                     <constraint firstItem="Goh-FN-PgX" firstAttribute="top" secondItem="inS-u7-bkn" secondAttribute="top" constant="10" id="JxM-c7-dTt"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZZD-xo-jzu" secondAttribute="trailing" id="WIv-pY-94F"/>
                                     <constraint firstItem="Goh-FN-PgX" firstAttribute="leading" secondItem="inS-u7-bkn" secondAttribute="leading" constant="10" id="eCA-5e-URv"/>
+                                    <constraint firstItem="ZZD-xo-jzu" firstAttribute="leading" secondItem="inS-u7-bkn" secondAttribute="leading" id="jYW-oo-HUb"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZZD-xo-jzu" secondAttribute="bottom" id="zPm-WS-4Ko"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="군자 아리따롱 키키키 센터" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMa-Re-UX7">

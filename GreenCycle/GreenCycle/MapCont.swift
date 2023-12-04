@@ -92,7 +92,6 @@ class MapCont: UIViewController, CLLocationManagerDelegate {
         new_marker.mapView = mapView
 
         new_marker.touchHandler = { (overlay: NMFOverlay) -> Bool in
-            print("마커 클릭")
 
             // MapDetailController로 화면 전환
             if let mapDetailController = self.storyboard?.instantiateViewController(withIdentifier: "MapDetailController") as? MapContDetail {

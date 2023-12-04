@@ -25,9 +25,12 @@ class MapContDetail: UIViewController {
     @IBOutlet weak var centerNumber: UILabel!
     @IBOutlet weak var centerItems: UILabel!
     
-    
     @IBOutlet weak var createBtn: UIView!
     @IBOutlet weak var readBtn: UIView!
+    
+    @IBAction func backDidTap(_ sender: Any) {
+        self.dismiss(animated: false, completion: nil)
+    }
     
     
     @IBAction func writeBtnDidTap(_ sender: Any) {
@@ -63,6 +66,7 @@ class MapContDetail: UIViewController {
     
     @IBAction func readBtnDidTap(_ sender: Any) {
         guard let ReviewCont = self.storyboard?.instantiateViewController(withIdentifier: "ReviewCont") as? ReviewCont else{return}
+        ReviewCont.centerInfoId = selectedMarkerId
         present(ReviewCont, animated: true, completion: nil)
     }
     

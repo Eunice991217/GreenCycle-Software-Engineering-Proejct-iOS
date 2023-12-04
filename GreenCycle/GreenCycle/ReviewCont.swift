@@ -6,53 +6,70 @@
 //
 
 import UIKit
+import Alamofire
 
 class ReviewCont: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var TableView: UITableView!
+    
+    var centerInfoId:Int?
+    var reviews: [ReviewModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         TableView.delegate=self
         TableView.dataSource=self
+        
+        print(reviews)
+        
+        fetchReviews()
 
-        // Do any additional setup after loading the view.
     }
     
+    func fetchReviews() {
+        guard let centerInfoId = centerInfoId else {
+            return
+        }
+
+        let apiUrl = "http://localhost:8080/api/review/\(centerInfoId)"
+
+        AF.request(apiUrl, method: .get).responseDecodable(of: [ReviewModel].self) { [weak self] response in
+            guard let self = self else { return }
+
+            switch response.result {
+            case .success(let reviews):
+                self.reviews = reviews
+                self.TableView?.reloadData() // 테이블 뷰를 다시 로드
+            case .failure(let error):
+                print("Error fetching reviews: \(error)")
+            }
+        }
+    }
+
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return UserDatas.count
+        print(reviews.count)
+        return reviews.count
     }
         
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as? TableViewCell else {return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as? TableViewCell else {
+            return UITableViewCell()
+        }
         
-        cell.basicImage.image = UserDatas[indexPath.row].basicImage
-        cell.userName.text=UserDatas[indexPath.row].name
-        cell.comment.text=UserDatas[indexPath.row].comment
-                
-        return cell // 테이블뷰에 넣을 셀
-                
+        cell.userName.text = reviews[indexPath.row].userName
+        cell.comment.text = reviews[indexPath.row].content
+        
+        return cell
     }
     
-    let UserDatas: [UserdataModel] = [
-        UserdataModel(
-            basicImage: UIImage(named: "recycle"),
-            name: "Eunice",
-            comment: "음 좋네용"
-        ),
-        UserdataModel(
-            basicImage: UIImage(named: "recycle"),
-            name: "KMK",
-            comment: "음 별루네용"
-        ),
-    ]
 }
 
-struct UserdataModel {
-    let basicImage: UIImage? // 에러방지 : 옵셔널 처리
-    let name: String
-    let comment: String
+struct ReviewModel: Decodable {
+    let userName: String
+    let content: String
 }
+
 
 
