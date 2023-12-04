@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var sendBtn: UIView!
     @IBOutlet weak var TextView: UITextView!
     
+    var userInfoId:Int?
     
     @IBAction func enterDidTap(_ sender: Any) {
         
@@ -28,6 +29,11 @@ class ViewController: UIViewController {
 
         var request = URLRequest(url: url)
         request.httpMethod = "POST" // You can change this depending on your API requirements
+        
+        // Present the MapCont view controller
+        guard let mapCont = self.storyboard?.instantiateViewController(withIdentifier: "MapCont") as? MapCont else {
+            return
+        }
 
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             // Handle the response from the server
@@ -36,13 +42,21 @@ class ViewController: UIViewController {
             } else if let data = data {
                 // Process the data received from the server (if needed)
                 print("Response: \(String(data: data, encoding: .utf8) ?? "")")
+                            
+                // Parse JSON response to extract "id"
+                if let jsonObject = try? JSONSerialization.jsonObject(with: data, options: []),
+                   let jsonDict = jsonObject as? [String: Any],
+                   let userId = jsonDict["id"] as? Int {
+                    // Assign the extracted "id" to userInfoId
+                    self.userInfoId = userId
+                    mapCont.userInfoId = self.userInfoId
+                    print("userInfoId : \(self.userInfoId!)")
+                }
+                
             }
         }.resume()
         
-        // Present the MapCont view controller
-        guard let mapCont = self.storyboard?.instantiateViewController(withIdentifier: "MapCont") as? MapCont else {
-            return
-        }
+        mapCont.userName = TextView.text
         mapCont.modalPresentationStyle = .fullScreen
         present(mapCont, animated: true, completion: nil)
         

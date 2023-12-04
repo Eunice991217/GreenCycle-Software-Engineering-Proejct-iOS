@@ -23,3 +23,10 @@ struct detailModelElement: Codable {
     let location :String
     let items : String
 }
+
+struct reviewModelElement: Codable {
+    let centerInfoId:Int
+    let userInfoId:Int
+    let userName: String
+    let content: String
+}

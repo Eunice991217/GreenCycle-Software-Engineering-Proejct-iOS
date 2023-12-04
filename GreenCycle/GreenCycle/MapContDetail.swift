@@ -11,6 +11,8 @@ import Alamofire
 class MapContDetail: UIViewController {
     
     var selectedMarkerId: Int?
+    var userName: String?
+    var userInfoId: Int?
     
     @IBOutlet weak var reviewTextField: UIView!
     @IBOutlet weak var textField: UITextView!
@@ -26,6 +28,37 @@ class MapContDetail: UIViewController {
     
     @IBOutlet weak var createBtn: UIView!
     @IBOutlet weak var readBtn: UIView!
+    
+    
+    @IBAction func writeBtnDidTap(_ sender: Any) {
+        
+        
+        
+        guard let selectedMarkerId = selectedMarkerId,
+              let userName = userName,
+              let content = textField.text else {
+            return
+        }
+
+        let apiUrl = "http://localhost:8080/api/createReview"
+
+        let reviewModel = reviewModelElement(
+            centerInfoId: selectedMarkerId,
+            userInfoId: userInfoId!,  // You may need to replace this with the actual userInfoId
+            userName: userName,
+            content: content
+        )
+
+        AF.request(apiUrl, method: .post, parameters: reviewModel, encoder: JSONParameterEncoder.default).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                print("Review created successfully: \(value)")
+            case .failure(let error):
+                print("Error creating review: \(error)")
+            }
+        }
+        
+    }
     
     
     @IBAction func readBtnDidTap(_ sender: Any) {
@@ -75,7 +108,6 @@ class MapContDetail: UIViewController {
                 }
             }
         }
-
         
     }
     

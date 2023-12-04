@@ -22,6 +22,8 @@ class MapCont: UIViewController, CLLocationManagerDelegate {
     var longitude_HVC = 0.0
     var latitude_HVC = 0.0
     
+    var userName:String?
+    var userInfoId:Int?
     
     @IBOutlet var mapView: NMFMapView!
     
@@ -96,7 +98,8 @@ class MapCont: UIViewController, CLLocationManagerDelegate {
             if let mapDetailController = self.storyboard?.instantiateViewController(withIdentifier: "MapDetailController") as? MapContDetail {
                 // id값을 다음 화면으로 전달
                 mapDetailController.selectedMarkerId = id
-                
+                mapDetailController.userName = self.userName
+                mapDetailController.userInfoId = self.userInfoId
 
                 mapDetailController.modalPresentationStyle = .fullScreen
                 self.present(mapDetailController, animated: true, completion: nil)

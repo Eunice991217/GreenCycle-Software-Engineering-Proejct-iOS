@@ -409,16 +409,28 @@
                                             <constraint firstAttribute="height" constant="30" id="Bhy-3k-cm9"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZn-Qg-Jl5">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="60"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <action selector="writeBtnDidTap:" destination="rs0-3D-iVh" eventType="touchUpInside" id="F2F-1i-N36"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" name="mainColor"/>
                                 <constraints>
                                     <constraint firstItem="AFC-PO-2vS" firstAttribute="top" secondItem="cVp-Mj-V2m" secondAttribute="top" constant="15" id="3Je-ma-3zm"/>
+                                    <constraint firstAttribute="trailing" secondItem="fZn-Qg-Jl5" secondAttribute="trailing" id="Ohl-Bv-Vu5"/>
                                     <constraint firstItem="ihf-vb-lbX" firstAttribute="top" secondItem="cVp-Mj-V2m" secondAttribute="top" constant="15" id="RhL-MF-p0p"/>
                                     <constraint firstItem="ihf-vb-lbX" firstAttribute="leading" secondItem="cVp-Mj-V2m" secondAttribute="leading" constant="60" id="UdP-4I-XXo"/>
                                     <constraint firstAttribute="height" constant="60" id="Ys9-o3-U6V"/>
                                     <constraint firstAttribute="bottom" secondItem="AFC-PO-2vS" secondAttribute="bottom" constant="15" id="bUD-Ay-8To"/>
+                                    <constraint firstAttribute="bottom" secondItem="fZn-Qg-Jl5" secondAttribute="bottom" id="dMt-Ar-VQS"/>
+                                    <constraint firstItem="fZn-Qg-Jl5" firstAttribute="top" secondItem="cVp-Mj-V2m" secondAttribute="top" id="moi-Z8-WAj"/>
                                     <constraint firstAttribute="bottom" secondItem="ihf-vb-lbX" secondAttribute="bottom" constant="15" id="o5s-4i-jC9"/>
                                     <constraint firstItem="AFC-PO-2vS" firstAttribute="leading" secondItem="ihf-vb-lbX" secondAttribute="trailing" constant="35" id="sQq-ST-W7V"/>
+                                    <constraint firstItem="fZn-Qg-Jl5" firstAttribute="leading" secondItem="cVp-Mj-V2m" secondAttribute="leading" id="yL5-Kl-mGy"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yuf-3d-J5x">
