@@ -63,10 +63,11 @@ class MapCont: UIViewController, CLLocationManagerDelegate {
             case .success(let value):
                 if let jsonArray = value as? [[String: Any]] {
                     for json in jsonArray {
-                        if let latitude = json["latitude"] as? Double,
+                        if let id = json["id"] as? Int,
+                           let latitude = json["latitude"] as? Double,
                            let longitude = json["longitude"] as? Double {
-                            // Now you can use latitude and longitude to create markers
-                            self.createMarker(latitude: latitude, longitude: longitude)
+                            // Now you can use latitude, longitude, and id to create markers
+                            self.createMarker(id: id, latitude: latitude, longitude: longitude)
                         }
                     }
                 }
@@ -77,7 +78,7 @@ class MapCont: UIViewController, CLLocationManagerDelegate {
     }
 
     // Function to create a marker
-    func createMarker(latitude: Double, longitude: Double) {
+    func createMarker(id: Int, latitude: Double, longitude: Double) {
         let new_marker = NMFMarker()
 
         new_marker.position = NMGLatLng(lat: latitude, lng: longitude)
@@ -93,7 +94,10 @@ class MapCont: UIViewController, CLLocationManagerDelegate {
 
             // MapDetailController로 화면 전환
             if let mapDetailController = self.storyboard?.instantiateViewController(withIdentifier: "MapDetailController") as? MapContDetail {
-                // 필요한 경우 데이터를 전달하려면 여기에서 설정
+                // id값을 다음 화면으로 전달
+                mapDetailController.selectedMarkerId = id
+                
+
                 mapDetailController.modalPresentationStyle = .fullScreen
                 self.present(mapDetailController, animated: true, completion: nil)
             }

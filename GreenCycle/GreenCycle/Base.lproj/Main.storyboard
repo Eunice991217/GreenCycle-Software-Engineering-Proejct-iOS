@@ -216,8 +216,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PMq-zF-gzN">
                                 <rect key="frame" x="123" y="179" width="270" height="60"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:00:00 AM - 18:00:00 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="247-fl-LIJ">
-                                        <rect key="frame" x="0.0" y="15" width="216" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:00 AM - 18:00 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="247-fl-LIJ">
+                                        <rect key="frame" x="0.0" y="15" width="162" height="30"/>
                                         <fontDescription key="fontDescription" name="JetBrainsMono-Regular" family="JetBrains Mono" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -518,6 +518,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="adminName" destination="Q31-Yl-RSg" id="6Vs-bs-5vX"/>
+                        <outlet property="centerItems" destination="Bw6-EC-4NR" id="d9y-wK-bSf"/>
+                        <outlet property="centerLocation" destination="J8r-MC-nKr" id="pUT-hf-YfQ"/>
+                        <outlet property="centerName" destination="kMa-Re-UX7" id="oi3-Xw-N9d"/>
+                        <outlet property="centerNumber" destination="YXP-X5-mBz" id="tMs-8T-iJw"/>
+                        <outlet property="centerTime" destination="247-fl-LIJ" id="G5J-Md-Vm7"/>
                         <outlet property="createBtn" destination="cVp-Mj-V2m" id="7oa-kB-5Re"/>
                         <outlet property="readBtn" destination="yuf-3d-J5x" id="oCl-M7-QNQ"/>
                         <outlet property="reviewTextField" destination="WmZ-pf-uIy" id="XYi-dJ-F3n"/>
