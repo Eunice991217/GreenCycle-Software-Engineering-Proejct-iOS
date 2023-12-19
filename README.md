@@ -5,7 +5,7 @@
 ## 📷 Screenshot
 <p>
 <img width="150" alt="image" src="https://github.com/Eunice991217/GreenCycle-iOS-ToyProject/assets/101406317/b4f122de-44ac-4627-8b4a-15118ccb163a">
-<img width="150" alt="스크린샷 2023-12-19 오후 3 24 11" src="https://github.com/Eunice991217/GreenCycle-iOS-ToyProject/assets/101406317/5e4f7181-3cd5-4bd7-9a8f-5813a5755d5f">
+<img width="148" alt="스크린샷 2023-12-19 오후 3 24 11" src="https://github.com/Eunice991217/GreenCycle-iOS-ToyProject/assets/101406317/5e4f7181-3cd5-4bd7-9a8f-5813a5755d5f">
 <img width="150" alt="스크린샷 2023-12-19 오후 3 24 31" src="https://github.com/Eunice991217/GreenCycle-iOS-ToyProject/assets/101406317/7105a562-d2f7-4eca-8c22-ac2287beea83">
 </p>
 
