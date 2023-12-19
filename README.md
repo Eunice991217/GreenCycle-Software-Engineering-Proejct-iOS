@@ -4,9 +4,9 @@
 
 ## 📷 Screenshot
 <p>
-<img width="150" alt="image" src="https://github.com/Eunice991217/GreenCycle-iOS-ToyProject/assets/101406317/b4f122de-44ac-4627-8b4a-15118ccb163a">
-<img width="146" alt="스크린샷 2023-12-19 오후 3 24 11" src="https://github.com/Eunice991217/GreenCycle-iOS-ToyProject/assets/101406317/5e4f7181-3cd5-4bd7-9a8f-5813a5755d5f">
-<img width="150" alt="스크린샷 2023-12-19 오후 3 24 31" src="https://github.com/Eunice991217/GreenCycle-iOS-ToyProject/assets/101406317/7105a562-d2f7-4eca-8c22-ac2287beea83">
+<img width="150" alt="image" src="https://github.com/Eunice991217/GreenCycle-iOS-ToyProject/assets/101406317/4aacbc59-569c-4515-a041-be5f8fbfaddf">
+<img width="150" alt="image" src="https://github.com/Eunice991217/GreenCycle-iOS-ToyProject/assets/101406317/b52fbcdd-f2e8-48f5-a777-f5da8d605cda">
+<img width="150" alt="image" src="https://github.com/Eunice991217/GreenCycle-iOS-ToyProject/assets/101406317/f0e6cdc5-f472-411c-af73-8e7500d75d76">
 </p>
 
 ![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=ios&logoColor=white)
