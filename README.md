@@ -4,10 +4,9 @@
 
 ## 📷 Screenshot
 <p>
-<img width="150" src="https://github.com/Eunice991217/CleanDining-iOS-ToyProject/assets/101406317/d29c1f12-827b-4a11-b86e-3887310c785c">
-<img width="150" src="https://github.com/Eunice991217/CleanDining-iOS-ToyProject/assets/101406317/037758a2-5e28-477d-b1ca-f43f95a4466e">
-<img width="150" alt="screenshot 3 (1242 x 2688)" src="https://github.com/Eunice991217/CleanDining-iOS-ToyProject/assets/101406317/4ea9ee64-c609-4f0c-8dc0-47ab7d04edf8">
-<img width="150" alt="screenshot 4 (1242 x 2688)" src="https://github.com/Eunice991217/CleanDining-iOS-ToyProject/assets/101406317/0babc098-1955-44bd-92e2-e8cec4ddea4d">
+<img width=“150” alt="image" src="https://github.com/Eunice991217/GreenCycle-iOS-ToyProject/assets/101406317/24051c38-efdc-4fd9-8f9c-923560555205">
+<img width=“150” alt="image" src="https://github.com/Eunice991217/GreenCycle-iOS-ToyProject/assets/101406317/b0007dbc-e3a9-44e5-87da-b233f95c03be">
+<img width=“150” alt="image" src="https://github.com/Eunice991217/GreenCycle-iOS-ToyProject/assets/101406317/c8de9772-c8f4-4b6d-bc5a-232b1c7eff7c">
 </p>
 
 ![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=ios&logoColor=white)
